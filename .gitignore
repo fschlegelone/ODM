@@ -1,0 +1,5 @@
+.DS_Store
+dotfiles/.vscode/
+dotfiles/.config/zed/
+dotfiles/.config/containers
+dotfiles/.config/github-copilot

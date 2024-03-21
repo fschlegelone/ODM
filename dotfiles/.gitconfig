@@ -1,0 +1,12 @@
+[user]
+email = fabian@schlegel.one
+name = fschlegelone
+[core]
+editor = nvim
+excludesfile = ~/.gitignore_global
+[init]
+defaultBranch = main
+[push]
+autoSetupRemote = true
+[color]
+ui = auto
