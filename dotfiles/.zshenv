@@ -5,6 +5,11 @@
 # user config home
 export XDG_CONFIG_HOME="$HOME/.config"
 
+# pyenv
+
+
+export PYENV_ROOT="$HOME/.pyenv"
+
 # node version manager home
 # export NVM_DIR="$HOME/.config/nvm"
 
@@ -27,17 +32,8 @@ export CPPFLAGS="-I/opt/homebrew/opt/curl/include"
 PATH="/opt/homebrew/bin:$PATH"
 PATH="/opt/homebrew/sbin:$PATH"
 
-# PATH="/System/Cryptexes/App/usr/bin:$PATH"
-# PATH="/bin:$PATH"
-# PATH="/sbin:$PATH"
-# PATH="/usr/bin:$PATH"
-# PATH="/usr/sbin:$PATH"
-# PATH="/usr/local/bin:$PATH"
-
 # rust cargo environment
 PATH="$HOME/.cargo/bin:$PATH"
 PATH="$HOME/.local/bin:$PATH"
-
-# PATH="/opt/homebrew/opt/fzf/bin:$PATH"
 
 export PATH

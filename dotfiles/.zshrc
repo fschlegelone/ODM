@@ -31,14 +31,59 @@ eval "$(starship init zsh)"
 [[ "$TERM_PROGRAM" == "vscode" ]] && . "$(code --locate-shell-integration-path zsh)"
 
 
+# --| DIRECTORY SHORTCUTS |--#
+z.nvim() {
+    cd $HOME/.config/nvim
+}
+
+z.config() {
+    cd $HOME/.config
+    clear
+    ls -a
+}
+z.repos() {
+    cd /opt/repos
+}
+
+z.projects() {
+    cd /opt/repos/projects
+}
+
+z.home() {
+  cd $HOME
+}
+
+
+z.() {
+clear
+echo "Supp $USER $neovim,"
+echo "Machine uses linux, osx, nvim, pnpm BTW"
+fastfetch
+
+}
+
+
+sync.() {
+clear
+echo "RELOADED: zsh, nvim"
+source "$HOME/.zshrc"
+source "$HOME/.zshenv"
+
+}
+
 # --| ALIAS DEFINITIONS |-- #
+alias please="sudo"
+alias pls="sudo"
 alias py="python"
 alias nv="nvim"
+alias vi="vim"
 alias ff="fastfetch"
 alias br="brew"
 alias cl="clear"
-alias md="mkdir"
-alias mf="touch"
+alias mkd="mkdir"
+alias mkf="touch"
+alias pn="pnpm"
+alias z="cd"
 
 # --| GNU UTILITIES ALIASE |-- #
 alias chroot="gchroot"

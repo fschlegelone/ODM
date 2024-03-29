@@ -99,8 +99,8 @@ init_check_os() {
     fi
 }
 
-update_symlinks() {
-  gum style --foreground "$HEX_HL1" --bold "Great! Updating home directory"
+sync() {
+  gum style --foreground "$HEX_HL1" --bold "Great! Syncing your Home Directory with the Dotfile Storage."
 
   # Clear all existing symlinks
   for file in "$HOME"/.*; do
@@ -149,7 +149,7 @@ main() {
   init_check_os # "$@"
   # Action: Update Symlinks
   elif [ "$ACTION" == "$UPDATE" ]; then
-    update_symlinks # "$@"
+    sync # "$@"
   fi
 }
 main

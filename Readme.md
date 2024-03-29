@@ -4,9 +4,12 @@
 
 ## Description 
 
-The first Dotfile Manager that doesnt suck!
+### The first Dotfile Manager that doesnt suck!
+
+The goal of ODM is to get rid of all bullshit we know from other Dotfile Managers and keep the critical process of managing your dotfiles as simple & secure as possible.
 
 ## Supported Platforms ☑︎
+
 Since the Dotfile problem typically occurs on Unixish Operating Systems such as Linux & MacOS, Windows is not supported by this awesome Dotfile Manager.
 
 - [Linux](https://www.linux.org/)
@@ -14,37 +17,40 @@ Since the Dotfile problem typically occurs on Unixish Operating Systems such as 
 - [Docker](https://www.docker.com/) & [Podman](https://podman.io/) (Coming soon..)
 
 ## Prerequisites 
-Prerequisites are automatically installed by ODMs Initialization Script. 
+
+Prerequisites are automatically installed by ODMs Initialization Script.
 If you can't or dont wanna use it, you can manually install them.
+
 - [Git](https://git-scm.com/)
 - [Gum](https://github.com/charmbracelet/gum)
-- [NerdFont](https://www.nerdfonts.com/)
 
 ## Installation 
-Sudo Rights required!
+
+2 Simple Steps to get started.
+
+**note: Sudo rights required.**
+**: Repository needs to be cloned to ~/ODM**
 
 1. Clone the repository
 
-    ```shell
-    git clone https://github.com/fschlegelone/one_dotfile_manager.git ~/ODM
-    ```
+   ```shell
+   git clone https://github.com/fschlegelone/one_dotfile_manager.git ~/ODM
+   ```
 
-2. Change to the project directory
-
-    ```shell
-    cd ~/ODM
-    ```
-
-3. Run Initialization Script
-    ```shell
-    ./src/init.sh
-    ```
-    
-4. Run Main Script
-    ```shell
-    ./main.sh
-    ```
+2. Run Main Script
+   ```shell
+   ~/ODM/run.sh
+   ```
 
 ## Usage 󰣿
 
-First of all it is important to understand how ODM works, before rushing into it.
+Make sure you understand these concepts before rushing into the usage:
+
+1. The Dotfile Storage is your **Single Point of Truth** for all your dotfiles. It is located at `~/ODM/dotfiles`.
+   If you delete a file there, it's gone.
+   If you add a file to it, it overrides the dotfile in your home directory on the next sync.
+2. The Dotfile Sync is the process of copying the dotfiles from the Dotfile Storage to your home directory.
+   It is triggered by the `sync` command.
+3. The Dotfile Storage can be backed up using the 'backup' command.
+   It creates a tarball of the dotfiles and stores it in `~/ODM/backups`.
+   !NOT WORKING YET!
