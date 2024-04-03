@@ -1,0 +1,116 @@
+return {
+  "nvimdev/dashboard-nvim",
+  dependencies = {
+    "nvim-tree/nvim-web-devicons",
+  },
+  event = "VimEnter",
+  config = function()
+    require("dashboard").setup({
+      theme = "doom",
+      disable_move = true,
+      shortcut_type = "letter",
+      hide = {
+        statusline = true,
+        tabline = true,
+        winbar = true,
+      },
+      --  preview = {
+      --    command = true,
+      --    file_path = true,
+      --    file_heigth = true,
+      --    file_width = true,
+      --  },
+      config = {
+        header = {
+          "                                                              ",
+          "                                                              ",
+          "                                                              ",
+          "                                                              ",
+          "⠀⠀⠀⠀⠀⠀⠀⠀⠀⣀⣀⣤⣤⣀⣀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣀⣀⣤⣤⣀⣀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢀⣀⣠⣤⣤⣀⣀⠀⠀⠀⠀⠀⠀⠀⠀⠀",
+          "⠀⠀⠀⠀⠀⠀⣠⣶⣿⣿⣿⣿⣿⣿⣿⣿⣦⡀⠀⠀⠀⠀⠀⠀⠀⣠⣶⣿⣿⣿⣿⣿⣿⣿⣿⣶⣄⠀⠀⠀⠀⠀⠀⠀⣠⣾⣿⣿⣿⣿⣿⣿⣿⣿⣦⡀⠀⠀⠀⠀⠀⠀",
+          "⠀⠀⠀⠀⢀⣾⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣦⠀⠀⠀⠀⠀⣼⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣧⠀⠀⠀⠀⢀⣾⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣆⠀⠀⠀⠀⠀",
+          "⠀⠀⠀⠀⣼⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⠿⣿⣿⣿⡆⠀⠀⠀⢸⣿⣿⠿⠿⢿⣿⣿⣿⣿⡿⠿⠿⣿⣿⡇⠀⠀⠀⣾⣿⣿⡿⠿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⡆⠀⠀⠀⠀",
+          "⠀⠀⠀⠀⢿⣿⠿⠿⠿⠿⣿⣿⣿⡏⠀⠀⠀⢹⣿⡇⠀⠀⠀⢸⣿⢱⣶⣴⣶⢹⣿⣿⡏⣶⣦⣶⡎⣿⡇⠀⠀⠀⢿⣿⠁⠀⠀⠈⣿⣿⣿⡿⠟⣋⣽⣿⣿⠇⠀⠀⠀⠀",
+          "⠀⠀⠀⠀⠘⣿⣧⣄⣀⣴⣿⣿⣿⣷⣄⣀⣠⣾⣟⠀⠀⠀⠀⠈⣿⣦⣙⣛⣡⣾⡿⢿⣷⣌⣛⣋⣴⣿⠁⠀⠀⠀⠘⣿⣦⣄⣀⣴⣿⣿⣿⣿⣶⣶⣤⣿⡟⠀⠀⠀⠀⠀",
+          "⠀⠀⠀⠀⠀⢿⣿⣿⣿⣿⣏⣼⣌⣿⣿⣿⣿⣿⡟⠀⠀⠀⠀⠀⢿⣿⣿⣿⣿⣿⣰⣆⣿⣿⣿⣿⣿⡿⠀⠀⠀⠀⠈⢿⣿⣿⣿⣿⣏⣼⣌⣿⣿⣿⣿⣿⠏⠀⠀⠀⠀⠀",
+          "⠀⠀⠀⠀⠀⠀⠉⠉⢿⣿⣿⣿⣿⣿⣿⡏⠉⠁⠀⠀⠀⠀⠀⠀⠀⠉⠉⢹⣿⣿⣿⣿⣿⣿⡏⠉⠉⠀⠀⠀⠀⠀⠀⠀⠉⠉⣿⣿⣿⣿⣿⣿⣿⡏⠉⠁⠀⠀⠀⠀⠀⠀",
+          "⠀⠀⠀⠀⠀⠀⠀⠀⠈⠉⠁⠁⠁⠉⠈⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠁⠁⠉⠉⠈⠈⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠈⠉⠁⠁⠁⠉⠉⠀⠀⠀⠀⠀⠀⠀⠀⠀",
+          "                                                              ",
+          "                                                              ",
+          "                                                              ",
+        },
+        center = {
+          {
+            icon = "󱁕   ",
+            desc = "NEOTREE",
+            key = "e",
+            key_format = "%s",
+            action = ":Neotree reveal <CR>",
+          },
+          {
+            icon = "   ",
+            desc = "FIND FILES",
+            key = "f",
+            key_format = "%s",
+            action = ":Telescope find_files <CR>",
+          },
+          {
+            icon = "   ",
+            desc = "LIVE GREP",
+            key = "g",
+            key_format = "%s",
+            action = ":Telescope live_grep <CR>",
+          },
+          {
+            icon = "󰌶   ",
+            desc = "INFO",
+            key = "i",
+            key_format = "%s",
+            action = "lua print(3)",
+          },
+          {
+            icon = "   ",
+            desc = "CLOSE",
+            key = "q",
+            key_format = "%s",
+            action = ":qa!",
+          },
+          {
+            icon = "   ",
+            desc = "/home",
+            key = "1",
+            key_format = "%s",
+            action = ":Neotree dir=~",
+          },
+          {
+            icon = "   ",
+            desc = "/projects",
+            key = "2",
+            key_format = "%s",
+            action = ":Neotree dir=/opt/repos/projects",
+          },
+          {
+            icon = "   ",
+            desc = "/nvim",
+            key = "3",
+            key_format = "%s",
+            action = ":Neotree dir=~/.config/nvim",
+          },
+          {
+            icon = "   ",
+            desc = "/root",
+            key = "4",
+            key_format = "%s",
+            action = ":Neotree dir=/",
+          },
+        },
+        footer = {
+          "                         ",
+          "                         ",
+          "私 は  を 使 っ て い る", -- japanese for "i use vim btw"
+          "                         ",
+        },
+      },
+    })
+  end,
+}

@@ -1,4 +1,6 @@
-# --| STARTUP --| #
+# --| STARTUP SCRIPTS --| #
+# tmux startup
+~/.config/scripts/tmux_startup.sh
 
 # --| FUNCTIONS --| #
 function ppath() {
@@ -30,52 +32,33 @@ eval "$(starship init zsh)"
 # --| VISUAL STUDIO CODE |-- #
 [[ "$TERM_PROGRAM" == "vscode" ]] && . "$(code --locate-shell-integration-path zsh)"
 
-
 # --| DIRECTORY SHORTCUTS |--#
 z.nvim() {
-    cd $HOME/.config/nvim
+  clear
+  cd $HOME/.config/nvim
+  eza
 }
-
-z.config() {
-    cd $HOME/.config
-    clear
-    ls -a
-}
-z.repos() {
-    cd /opt/repos
-}
-
-z.projects() {
-    cd /opt/repos/projects
-}
-
-z.home() {
-  cd $HOME
-}
-
 
 z.() {
-clear
-echo "Supp $USER $neovim,"
-echo "Machine uses linux, osx, nvim, pnpm BTW"
-fastfetch
-
+  clear
+  echo "Supp $USER $neovim,"
+  echo "Machine uses linux, osx, nvim, pnpm BTW"
+  fastfetch
 }
 
-
 sync.() {
-clear
-echo "RELOADED: zsh, nvim"
-source "$HOME/.zshrc"
-source "$HOME/.zshenv"
-
+  clear
+  echo "RELOADED: zsh, nvim"
+  source "$HOME/.zshrc"
+  source "$HOME/.zshenv"
 }
 
 # --| ALIAS DEFINITIONS |-- #
 alias please="sudo"
 alias pls="sudo"
 alias py="python"
-alias nv="nvim"
+alias nvim="nvim --listen /tmp/nvimsocket"
+alias nv="nvim --listen /tmp/nvimsocket"
 alias vi="vim"
 alias ff="fastfetch"
 alias br="brew"
@@ -84,6 +67,9 @@ alias mkd="mkdir"
 alias mkf="touch"
 alias pn="pnpm"
 alias z="cd"
+alias ls="eza"
+alias tx="tmux"
+alias nf="neofetch"
 
 # --| GNU UTILITIES ALIASE |-- #
 alias chroot="gchroot"
