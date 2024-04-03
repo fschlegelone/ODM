@@ -18,6 +18,8 @@ autocmd("TextYankPost", {
 -- change workdirectory
 autocmd({ "DirChanged" }, {
   group = "workdirectory",
-  command = "!tmux send-keys -t dev:1.0 'cd ..' Enter",
+  callback = function()
+    print("CWD changed")
+  end,
   pattern = "*",
 })

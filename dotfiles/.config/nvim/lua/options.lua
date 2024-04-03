@@ -1,6 +1,3 @@
--- # # # # --
--- OPTIONS --
--- # # # # --
 -- set tab to 2 spaces
 vim.cmd("set expandtab")
 vim.cmd("set tabstop=2")
@@ -18,9 +15,11 @@ vim.opt.numberwidth = 2
 vim.g.loaded_perl_provider = 0
 
 -- set nvim shell binary
-vim.o.shell = "/bin/zsh -i"
+vim.o.shell = "/opt/homebrew/bin/zsh -i"
 
 vim.opt.termguicolors = true
 
 -- highlight cursorline
 vim.opt.cursorline = false
+
+vim.opt.hidden = true

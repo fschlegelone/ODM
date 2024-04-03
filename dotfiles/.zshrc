@@ -1,6 +1,4 @@
 # --| STARTUP SCRIPTS --| #
-# tmux startup
-~/.config/scripts/tmux_startup.sh
 
 # --| FUNCTIONS --| #
 function ppath() {
@@ -59,8 +57,6 @@ alias pls="sudo"
 alias py="python"
 alias nvim="nvim --listen /tmp/nvimsocket"
 alias nv="nvim --listen /tmp/nvimsocket"
-alias vi="vim"
-alias ff="fastfetch"
 alias br="brew"
 alias cl="clear"
 alias mkd="mkdir"
@@ -68,7 +64,6 @@ alias mkf="touch"
 alias pn="pnpm"
 alias z="cd"
 alias ls="eza"
-alias tx="tmux"
 alias nf="neofetch"
 
 # --| GNU UTILITIES ALIASE |-- #
